@@ -1,0 +1,42 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+install.packages("rmarkdown")
+install.packages("leaflet")
+```
+
+## Exploring My World with Leaflet
+
+This interactive map highlights some of my favorite locations, each with a brief description. Click on the markers to learn more!
+
+```{r}
+
+library(leaflet)
+
+```
+
+```{r}
+
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat = c(34.0522, 40.7128, 51.5074),
+             lng = c(-118.2437, -74.0060, -0.1278),
+             popup = c("Los Angeles, USA: The city of angels and endless sunshine!",
+                       "New York City, USA: The bustling metropolis with iconic landmarks.",
+                       "London, UK: A city rich in history and culture.")) %>%
+  addCircleMarkers(lat = 37.7749, lng = -122.4194,
+                   radius = 10, color = "blue", fillOpacity = 0.8,
+                   popup = "San Francisco, USA: Golden Gate Bridge views and a vibrant tech scene.")
+
+my_map
+
+```
+
+I hope you enjoyed this quick tour of some of my favorite spots!
+
+
