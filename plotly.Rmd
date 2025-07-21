@@ -1,7 +1,7 @@
 ---
 title: "Interactive Data Exploration with Plotly"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
-output: ioslides_presentation
+output: html_document
 ---
 
 # Plotly Interactive Scatter Plot
