@@ -1,5 +1,6 @@
 ---
-title: "Untitled"
+title: "My Page"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output: html_document
 ---
 
